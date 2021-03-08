@@ -12,27 +12,44 @@
 <body class = 'text-white' style = "background-color: aquamarine;">
     
     <div class ="container">
+
+<!-- Jumbotron         -->
         <div class = "jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+            <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
             </div>
 
 <!-- Mars News -->
 
 <div class="container">
-<h2 style = "color: blueviolet; font-family: Impact; text-align: center;">Featured Mars Image</h2>
+<h2 style = "color: blueviolet; font-family: Impact; text-align: center;">Latest Mars News</h2>
+<h4 style = "color:rgb(226,145,130)">{{data.news_titles[0]}}</h4>
+<p>{{data.news_p[0]}}</p>
+</div>
+
+
+<!-- Featured Image -->
+
+<div class="container">
+    <div class = "row">
+        <div class = "col-lg-8 col-md-8 col-sm-6 col-xm-12">
+            <h3 style = "color:chartreuse; font-family: Impact; text-align: center;">Featured Mars Image</h3>
     <img src="{{data.featured_image_url}}" style = "max-width: 100%;" alt="mars image">
     </div>
+
+<!-- Mars Facts     -->
         <div class="col-lg-4 col-md-4 col-sm-6 col-xm-12">
             <div>
-                <h3 style = "color: crimson; font-family: Impact; ">Mars Facts</h3>
+                <h3 style = "color: crimson; font-family: Impact">Mars Facts</h3>
                 <table border = "1" class = "dataframe">
                     <thead>
                         <tr style = "text-align: right;">
+                            <th></th>
                         <th>Measurement</th>
                         </tr>
                         <tr>
                             <th>Data</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -46,15 +63,15 @@
                             </tr>
                             <tr>
                                 <th>Mass</th>
-                                <td>6.39 *</td>
+                                <td>6.39 * 10^23kg (0.11 Earths)</td>
                             </tr>
                             <tr>
                               <th>Moons</th>
-                              <td>2</td>  
+                              <td>2(Phobos & amp; Deimos</td>  
                             </tr>
                             <tr>
                                 <th>Orbit Distance</th>
-                                <td>227943</td>
+                                <td>227,943,824 km (1.38 AU) </td>
                             </tr>
                             <tr>
                                 <th>Orbit Period</th>
@@ -62,11 +79,11 @@
                             </tr>
                             <tr>
                                 <th>Surface Temperature</th>
-                                <td>-87 to -5</td>
+                                <td>-87 to -5°C</td>
                             </tr>
                             <tr>
                                 <th>First Record</th>
-                                <td>2nd Millenium</td>
+                                <td>2nd Millenium BC</td>
                             </tr>
                             <tr>
                                 <th>Recorded By</th>
@@ -85,6 +102,7 @@
 <!-- Mars Hemispheres -->
 <h1 style="padding-top: 50px; margin-top: 100px; text-align: center;">Mars Hemispheres</h1>
 
+</div>
 <div class="container-fluid">
     <div class = "row">
     <div class="col-md-6">
@@ -94,29 +112,21 @@
                 <img src={{data.hemisphere_image_urls[0] ["img_url"]}} style="max-width: 100%; height:auto;" />
                 </div>
                 <div class="col-md-12 text-center">
-                    <h3>{{data.hemisphere_image_urls[0]["title"]}}</h3>
-                <img src={{data.hemisphere_image_urls[0] ["img_url"]}} style="max-width: 100%; height:auto;" />
+                    <h3>{{data.hemisphere_image_urls[1]["title"]}}</h3>
+                <img src={{data.hemisphere_image_urls[1] ["img_url"]}} style="max-width: 100%; height:auto;" />
                 </div>
                 </div>
                 </div>
                 <div class="col-md-6">
                     <div classs = "row">
                         <div class="col-md-12">
-                            <h3>{{data.hemisphere_image_urls[0]["title"]}}</h3>
-                <img src={{data.hemisphere_image_urls[0] ["img_url"]}} style="max-width: 100%; height:auto;" />
-                </div>
-                </div>
-                </div>
-                <div class="col-md-6">
-                    <div classs = "row">
-                        <div class="col-md-12">
-                            <h3>{{data.hemisphere_image_urls[0]["title"]}}</h3>
-                <img src={{data.hemisphere_image_urls[0] ["img_url"]}} style="max-width: 100%; height:auto;" />
+                            <h3>{{data.hemisphere_image_urls[2]["title"]}}</h3>
+                <img src={{data.hemisphere_image_urls[2] ["img_url"]}} style="max-width: 100%; height:auto;" />
                 </div>
                 <div class="col-md-12">
-                    <h3>{{data.hemisphere_image_urls[0]["title"]}}</h3>
-        <img src={{data.hemisphere_image_urls[0] ["img_url"]}} style="max-width: 100%; height:auto;" />
-        </div>
+                            <h3>{{data.hemisphere_image_urls[3]["title"]}}</h3>
+                <img src={{data.hemisphere_image_urls[3] ["img_url"]}} style="max-width: 100%; height:auto;" />
+                </div>
         </div>
         </div>
         </div>
